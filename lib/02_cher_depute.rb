@@ -49,18 +49,6 @@ def get_all_mails(annuaire_url)
     mail_list << personal_info(links[i])
     i += 1
   end
-  p mail_list
+  mail_list
 
 end
-
-#personal_info("http://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA720870")
-get_all_mails("http://www2.assemblee-nationale.fr/deputes/liste/tableau")
-
-#puts get_personal_url("http://www2.assemblee-nationale.fr/deputes/liste/tableau")
-=begin
-
-links.each do |link|
-  puts personal_info(link)
-end
-return mail_list
-=end
