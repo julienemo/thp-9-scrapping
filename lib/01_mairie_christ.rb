@@ -9,7 +9,7 @@ def get_townhall_email(townhall_url)
   return page.xpath('/html/body/div/main/section[2]/div/table/tbody/tr[4]/td[2]').text
 end
 
-def get_townhall_urls(annuaire_url)
+  def get_townhall_urls(annuaire_url)
   page = Nokogiri::HTML(open(annuaire_url))
 
   # since the href is not an entire url
@@ -42,3 +42,5 @@ def get_all_emails(annuaire_url)
   end
   email_list
 end
+
+puts get_all_emails("https://www.annuaire-des-mairies.com/somme.html")

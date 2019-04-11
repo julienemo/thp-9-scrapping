@@ -24,4 +24,4 @@ def get_price_list
   return price_list
 
 end
-puts get_price_list
+
