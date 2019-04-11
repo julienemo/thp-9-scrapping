@@ -51,8 +51,8 @@ def get_all_mails(annuaire_url)
   end
   p mail_list
 
-
 end
+
 #personal_info("http://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA720870")
 get_all_mails("http://www2.assemblee-nationale.fr/deputes/liste/tableau")
 

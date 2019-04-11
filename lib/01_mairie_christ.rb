@@ -42,5 +42,3 @@ def get_all_emails(annuaire_url)
   end
   email_list
 end
-
-puts get_all_emails("https://www.annuaire-des-mairies.com/somme.html")
