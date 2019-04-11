@@ -12,7 +12,7 @@ end
 describe "get_townhall_urls method" do
 
   it "takes an annuaire link and returns a list of links of all cities on this page" do
-    expect(get_townhall_urls("https://www.annuaire-des-mairies.com/95/avernes.html").length)not_to eq(@)
+    expect(get_townhall_urls("https://www.annuaire-des-mairies.com/95/avernes.html").length).not_to eq("@")
   end
 
 end
@@ -20,7 +20,7 @@ end
 describe "get_all_emails method" do
 
   it "takes an annuaire link and returns a list of emails of all cities on this page" do
-    expect(get_all_emails("https://www.annuaire-des-mairies.com/95/avernes.html").to include("@")
+    expect(get_all_emails("https://www.annuaire-des-mairies.com/95/avernes.html")).to include("@")
   end
 
 end
