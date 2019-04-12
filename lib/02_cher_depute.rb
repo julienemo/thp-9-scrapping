@@ -14,6 +14,9 @@ def personal_info(deputy_page)
   personal_mails << page.xpath('//*[@id="haut-contenu-page"]/article/div[3]/div/dl/dd[4]/ul/li[2]/a').text
   other_mail = page.xpath('//*[@id="hcard-Damien-Abad"]/dd[3]/a').text
   unless other_mail == ""
+    # some people have the "other mail address" and others don't
+    # if there is a second email, add it to the contact array
+    # other wise the array has only one item
     personal_mails << other_mail
   end
   info['contact'] = personal_mails
@@ -52,3 +55,9 @@ def get_all_mails(annuaire_url)
   mail_list
 
 end
+
+
+# for manual tests
+# puts personal_info("http://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA605036")
+# puts get_personal_url("http://www2.assemblee-nationale.fr/deputes/liste/tableau")
+# puts get_all_mails("http://www2.assemblee-nationale.fr/deputes/liste/tableau")
