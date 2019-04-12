@@ -42,3 +42,9 @@ def get_all_emails(annuaire_url)
   end
   email_list
 end
+
+
+# for manual tests
+# puts get_townhall_email("https://www.annuaire-des-mairies.com/95/avernes.html")
+# puts get_townhall_urls("http://www.annuaire-des-mairies.com/hauts-de-seine.html")
+# puts get_all_emails("http://www.annuaire-des-mairies.com/aube.html")
