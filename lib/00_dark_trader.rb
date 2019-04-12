@@ -25,3 +25,4 @@ def get_price_list
 
 end
 
+# puts get_price_list
