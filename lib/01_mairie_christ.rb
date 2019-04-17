@@ -5,8 +5,12 @@ require "open-uri"
 
 
 def get_townhall_email(townhall_url)
+  info = {}
   page = Nokogiri::HTML(open(townhall_url))
-  return page.xpath('/html/body/div/main/section[2]/div/table/tbody/tr[4]/td[2]').text
+  name = page.xpath('/html/body/div/header/section/div/div[1]/h1/small').text.split(" ")[-1]
+  email = page.xpath('/html/body/div/main/section[2]/div/table/tbody/tr[4]/td[2]').text
+  info[name] = email
+  return info
 end
 
   def get_townhall_urls(annuaire_url)
